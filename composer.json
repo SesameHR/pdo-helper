@@ -1,5 +1,5 @@
 {
-	"name": "grantjm9992/pdo-helper",
+	"name": "sesamehr/pdo-helper",
 	"description": "FluentPDO is a quick and light PHP library for rapid query building. It features a smart join builder, which automatically creates table joins.",
 	"keywords": ["db", "database", "dbal", "pdo", "fluent", "query", "builder", "mysql", "oracle"],
 	"homepage": "https://github.com/envms/fluentpdo",
@@ -19,7 +19,7 @@
 		}
 	},
   "require": {
-    "php": "^7.1",
+    "php": "^7.1||^8.1",
     "ext-pdo": "*"
   },
 	"require-dev": {
