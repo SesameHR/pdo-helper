@@ -45,3 +45,6 @@ jobs:
 
     - name: Init database
       run: mysql -u root < tests/_resources/fluentdb.sql
+
+    - name: Run tests
+      run: phpunit --configuration phpunit.xml
