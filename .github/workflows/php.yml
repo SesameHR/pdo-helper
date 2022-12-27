@@ -14,16 +14,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_USER: vagrant
-          MYSQL_PASSWORD: vagrant
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+#    services:
+#      mysql:
+#        image: mysql:5.7
+#        env:
+#          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+#          MYSQL_USER: vagrant
+#          MYSQL_PASSWORD: vagrant
+#        ports:
+#          - 3306:3306
+#        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
     - uses: actions/checkout@v3
@@ -43,8 +43,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: Init database
-      run: mysql --protocol=TCP -u root < tests/_resources/fluentdb.sql
+    #- name: Init database
+    #  run: mysql --protocol=TCP -u root < tests/_resources/fluentdb.sql
 
-    - name: Run tests
-      run: phpunit --configuration phpunit.xml
+    #- name: Run tests
+    #  run: phpunit --configuration phpunit.xml
